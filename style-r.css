@@ -1,0 +1,176 @@
+/* Background and Fonts */
+body{
+    background-color: #FAFAFA;
+    color: #444;
+    font-family: "Chivo", sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 25pt;
+}
+.header{
+    background-color: #FAFAFA;
+    color: #707070;
+}
+.footer{
+    background-color: #FAFAFA;
+    color: #707070;
+}
+.text{
+    position: absolute;
+    top: 500px;
+    color: #BFBA86;
+}
+
+/* Navigation */
+a:link{
+    text-decoration: none;
+    color: #707070;
+}
+a:hover {
+    text-decoration:none;
+    color: black !important;
+    }
+a:visited {
+    text-decoration: none;
+    color: #707070;
+    }
+.header{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 0px 15px;
+    /* border: 1px solid red; */
+}
+.logo{
+    font-family: "Chivo", sans-serif;
+    font-weight: 600;
+    font-size: 30px;
+    cursor: pointer;
+    margin-right: auto;
+}
+.navbar li{
+    list-style: none;
+    display: inline-block;
+    margin: 0 20px 0 40px;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+    /* border: 1px solid orange; */
+}
+.navbar li:hover {
+    color: black;
+}
+.footer{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 100px 0px 30px;
+    /* border: 1px solid red; */
+}
+.footer li{
+    list-style: none;
+    display: inline-block;
+    margin: 0px 75px;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+    /* border: 1px solid orange; */
+}
+.footer li:hover {
+    color: black;
+}
+.button{
+    background-color: #FAFAFA;
+    border: 1px solid #BFBA86;
+    color: #BFBA86;
+    padding: 10px 25px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    transition: all 0.3s ease 0s;
+}
+.button:hover{
+    background-color: #BFBA86;
+    border: 1px solid #BFBA86;
+    color: #FAFAFA;
+    padding: 10px 25px;
+}
+
+/* CSS Grids and Flexbox */
+.container{
+        display:grid;
+        height: 250vh;
+        grid-template-columns: 0.6fr 1.4fr;
+        grid-template-rows: 5% 85% 5% 5%;
+        grid-template-areas: 
+        "hd hd"
+        "sd resume"
+        "sd button"
+        "ft ft";
+    }
+.box{
+    width: auto;
+    height: auto;
+    /* border: 1px solid red; */
+}
+#one{
+    grid-area: hd;
+}
+#two{
+    grid-area: sd;
+    background-image: url(img/spine.png);
+    /* background-size: 60px 600px; */
+    background-size: 15% 45%;
+    background-repeat: no-repeat;
+    background-position-x: 5%;
+}
+#three{
+    grid-area: resume;
+    background-image: url(img/resume.png);
+    /* background-size: 850px 1500px; */
+    background-size: 85% 95%;
+    background-repeat: no-repeat;
+    background-position-x: left;
+}
+#four{
+    grid-area: button;
+    display: flex;
+    align-items: center;
+}
+#five{
+    grid-area: ft;
+}
+
+/* Media Queries */
+@media (min-width: 680px) and (max-width:1000px) {
+    .container{
+    display:grid;
+    height: 180vh;
+    grid-template-columns: 0.6fr 1.4fr;
+    grid-template-rows: 5% 80% 5% 5%;
+    grid-template-areas: 
+    "hd hd"
+    "sd resume"
+    "sd button"
+    "ft ft";
+    }
+    body{
+        font-size: 12px;
+    }
+    .logo{
+        font-weight: 600;
+        font-size: 20px;
+    }
+    #two{
+        grid-area: sd;
+        background-image: url(img/spine.png);
+        background-size: 15% 50%;
+        background-repeat: no-repeat;
+        background-position-x: 10%;
+    }
+    #three{
+        grid-area: resume;
+        background-image: url(img/resume.png);
+        background-size: 90% 95%;
+        background-repeat: no-repeat;
+        background-position-x: left;
+    }
+}

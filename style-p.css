@@ -1,0 +1,181 @@
+/* Background and Fonts */
+body{
+    background-color: #FAFAFA;
+    color: #444;
+    font-family: "Chivo", sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 25pt;
+}
+.header{
+    background-color: #FAFAFA;
+    color: #707070;
+}
+.footer{
+    background-color: #FAFAFA;
+    color: #707070;
+}
+.text{
+    position: absolute;
+    top: 500px;
+    color: #BFBA86;
+}
+
+/* Navigation */
+a:link{
+    text-decoration: none;
+    color: #707070;
+}
+a:hover {
+    text-decoration:none;
+    color: black !important;
+    }
+a:visited {
+    text-decoration: none;
+    color: #707070;
+    }
+.header{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 0px 15px;
+    /* border: 1px solid red; */
+}
+.logo{
+    font-family: "Chivo", sans-serif;
+    font-weight: 600;
+    font-size: 30px;
+    cursor: pointer;
+    margin-right: auto;
+}
+.navbar li{
+    list-style: none;
+    display: inline-block;
+    margin: 0 20px 0 40px;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+    /* border: 1px solid orange; */
+}
+.navbar li:hover {
+    color: black;
+}
+.footer{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 100px 0px 30px;
+    /* border: 1px solid red; */
+}
+.footer li{
+    list-style: none;
+    display: inline-block;
+    margin: 0px 75px;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+    /* border: 1px solid orange; */
+}
+.footer li:hover {
+    color: black;
+}
+
+/* CSS Grids and Flexbox */
+.container{
+        display:grid;
+        height: 200vh;
+        grid-template-columns: 0.6fr 1.4fr;
+        grid-template-rows: 5% repeat(4, 22%) 5%;
+        grid-template-areas: 
+        "hd hd"
+        "sd pj1"
+        "sd pj2"
+        "sd pj3"
+        "sd pj4"
+        "ft ft";
+    }
+.box{
+    width: auto;
+    height: auto;
+    /* border: 1px solid red; */
+}
+#one{
+    grid-area: hd;
+}
+#two{
+    grid-area: sd;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#three{
+    grid-area: pj1;
+    background-image: url("img/pj1.png");
+    background-size: 92% 70%;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+#four{
+    grid-area: pj2;
+    background-image: url("img/pj2.png");
+    background-size: 92% 70%;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+#five{
+    grid-area: pj3;
+    background-image: url("img/pj3.png");
+    background-size: 92% 70%;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+#six{
+    grid-area: pj4;
+    background-image: url("img/pj4.png");
+    background-size: 92% 70%;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+#seven{
+    grid-area: ft;
+}
+
+/* Media Queries */
+@media (min-width: 680px) and (max-width:1000px) {
+    .container{
+    display:grid;
+    height: 140vh;
+    grid-template-columns: 0.6fr 1.4fr;
+    grid-template-rows: 5% repeat(4, 22%) 5%;
+    grid-template-areas: 
+    "hd hd"
+    "sd pj1"
+    "sd pj2"
+    "sd pj3"
+    "sd pj4"
+    "ft ft";
+    }
+    body{
+        font-size: 12px;
+    }
+    .logo{
+        font-weight: 600;
+        font-size: 20px;
+    }
+#three{
+    grid-area: pj1;
+    background-size: 88% 60%;
+}
+#four{
+    grid-area: pj2;
+    background-size: 88% 60%;
+
+}
+#five{
+    grid-area: pj3;
+    background-size: 88% 60%;
+
+}
+#six{
+    grid-area: pj4;
+    background-size: 88% 60%;
+    }
+}
